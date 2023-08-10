@@ -34,7 +34,6 @@ server.on('client', async (client) => {
 
         // respond with the server's current time.
         return {
-            interval:300,
             currentTime: new Date().toISOString()
         };
     });
@@ -53,14 +52,6 @@ server.on('client', async (client) => {
         // throw an RPC error to inform the server that we don't understand the request.
         throw createRPCError("NotImplemented");
     });
-    
 });
 
-
- (async function main () {
-    // You can use await inside this function block
- await server.listen(3000)
-        .then(()=>{console.log("listening to port 3000")});
-    
-
-})();
+ server.listen(8000);
