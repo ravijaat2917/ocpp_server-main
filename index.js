@@ -9,7 +9,7 @@ server.auth((accept, reject, handshake) => {
     // accept the incoming client
     accept({
         // anything passed to accept() will be attached as a 'session' property of the client.
-        sessionId: 'XYZ123'
+        sessionId: 'Charger'
     });
 });
 
